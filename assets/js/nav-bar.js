@@ -5,7 +5,13 @@ function scrollFunction() {
         document.getElementById("myNavbar").style.backgroundColor = "rgba(10, 21, 37, 0.95)";
         var elements = document.querySelectorAll('a.nav-link');
         [].slice.call(elements).forEach(function(elem) {
-            elem.style.color = '#FFF';
+          if (elem.classList.contains("nav-link")) {
+              if (elem.classList.contains("dropdown-toggle")) {
+                elem.className = "nav-link dropdown-toggle nav-link-2";
+              } else {
+                elem.className = "nav-link nav-link-2";
+              }
+          }
         });
         document.getElementById("img-featured-navbar-sm").style.visibility = "visible";
         document.getElementById("img-featured-navbar-sm").style.opacity = "1";
@@ -16,7 +22,13 @@ function scrollFunction() {
         document.getElementById("myNavbar").style.backgroundColor = "transparent";
         var elements = document.querySelectorAll('a.nav-link');
         [].slice.call(elements).forEach(function(elem) {
-            elem.style.color = '#0A1525';
+          if (elem.classList.contains("nav-link")) {
+              if (elem.classList.contains("dropdown-toggle")) {
+                elem.className = "nav-link dropdown-toggle nav-link-1";
+              } else {
+                elem.className = "nav-link nav-link-1";
+              }
+          }
         });
         document.getElementById("img-featured-navbar-sm").style.transform = "scale(0.5,0.5)";
         document.getElementById("img-featured-navbar-sm").style.visibility = "hidden";

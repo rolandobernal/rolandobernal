@@ -43,6 +43,13 @@ $max-width: 1000px;
   margin-right: auto;
 }
 
+@mixin custom-link-style {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    color: $color-accent !important;
+  }
+}
 
 /* BASE ------------------------------------------- */
 
@@ -83,11 +90,7 @@ p {
 }
 
 a {
-  color: $color-primary;
-  text-decoration: none;
-  &:hover {
-    color: $color-accent;
-  }
+  @include custom-link-style;
 }
 
 /* HEADER & FOOTER -------------------------------- */
@@ -136,26 +139,9 @@ footer {
     @include social-icons;
   }
   #myID {
-    //position: fixed;
     bottom: 0;
     width: 100%;
-    //height: 60px;
-    //border-top: 1px solid #000;
-    //background: red;
     z-index: 1;
-    //transition: all 1.5s;
-//    .hide {
-//      visibility: hidden !important;
-//      opacity: 0 !important;
-//      transform: scale(0.5, 0.5);
-//      transition: visibility 0.15s, opacity 0.5s ease-in, transform 0.5s ease;
-//    }
-//    .show {
-//      visibility: visible;
-//      opacity: 1;
-//      transform: scale(1, 1);
-//      transition: visibility 0.15s, opacity 0.5s ease-in, transform 0.5s ease;
-//    }
   }
   .hide {
     visibility: hidden !important;
@@ -167,17 +153,13 @@ footer {
     visibility: visible !important;
     opacity: 1 !important;
     transform: scale(1, 1);
-    transition: visibility 0.15s, opacity 0.5s ease-in, transform 0.5s ease;
+    transition: visibility 0.15s, opacity 0.5s ease-in, transform 1.25s ease;
   }
   
   .footer-text {
       margin: 20px 0;
       a {
-        color: $color-primary;
-        text-decoration: none;
-        &:hover {
-          color: $color-secondary !important;
-        }
+        @include custom-link-style;
       }
   }
   .dropdown-divider {
@@ -204,23 +186,41 @@ footer {
 
 /* COMPONENTS ------------------------------------------*/
 
+// Nav-bar variables:
+  .nav-link-1 {
+    color: $color-primary !important;
+    text-decoration: none;
+    &:hover {
+      color: $color-accent !important;
+    }
+  }
+  .nav-link-2 {
+    color: $color-accent !important;
+    text-decoration: none;
+    &:hover {
+      color: $white !important;
+    }
+  }
 
 // Nav-bar
 .navbar {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 64px;
-    z-index: 400;
-    text-transform: uppercase;
-      .dropdown-item {
-        color: $color-primary !important;
-        &:hover {
-                  color: $color-secondary !important;
-                  cursor: pointer;
-                }
-      }
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 400;
+  text-transform: uppercase;
+//  a.nav-link {
+//    @include custom-link-style;
+//  }
+    .dropdown-item {
+      color: $color-primary !important;
+      &:hover {
+                color: $color-secondary !important;
+                cursor: pointer;
+              }
+    }
 
     #img-featured-navbar-sm {
         width: 64px;
