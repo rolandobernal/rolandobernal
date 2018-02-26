@@ -5154,6 +5154,7 @@ header {
   background: linear-gradient(#4B92DB, #0A1525), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+  background-position: 0 0, 0 45%;
   position: relative; }
   header h1 {
     color: #fff;
@@ -5269,9 +5270,6 @@ footer {
 .intro {
   margin: 60px 0 0 0;
   padding: 3em; }
-
-.main-content {
-  margin-bottom: 100px; }
 
 /* COMPONENTS ------------------------------------------*/
 .nav-link-1 {
@@ -5424,20 +5422,58 @@ footer {
   transform: scale(1, 1);
   transition: visibility 0.15s, opacity 0.5s ease-in, transform 0.5s ease; }
 
-.card {
+.card-grid-container {
   display: flex;
+  justify-content: center;
+  margin-bottom: 150px; }
+
+.card-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center; }
+
+.card-grid-item {
+  border: 1px solid #fff;
+  width: 100%;
+  height: 300px;
+  flex: 1;
   padding: 1.5em 1em;
   border: 1px solid #eee;
   border-radius: 0.25em; }
-  .card h1 {
+  .card-grid-item h1 {
     margin: 0.35em 0 0;
     line-height: 1.25; }
-  .card .icon,
-  .card h1 {
+  .card-grid-item .icon,
+  .card-grid-item h1 {
     color: #0A1525; }
-  .card .icon {
+  .card-grid-item .icon {
     font-size: 80px; }
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center; }
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center; }
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+  flex: 1;
+  background-color: #4B92DB;
+  border: 1px solid #eee; }
+  .photo-grid-item img {
+    width: inherit;
+    height: inherit; }
 
 .btn-callout, .btn-info {
   color: #fff;
@@ -5461,5 +5497,33 @@ footer {
   font-size: 0.85em;
   background-color: #0A1525;
   margin-top: auto; }
+
+/* MEDIA QUERIES ---------------------------------- */
+@media (max-width: 575px) {
+  header {
+    height: 340px; }
+    header h1 {
+      font-size: 3.4em; }
+
+  .img-featured {
+    display: none; } }
+@media (min-width: 576px) {
+  .card-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row; } }
+@media (min-width: 768px) {
+  .photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center; } }
+@media (min-width: 992px) {
+  header {
+    background-position: 0 0, 0 45%; } }
 
 /*# sourceMappingURL=app.css.map */
