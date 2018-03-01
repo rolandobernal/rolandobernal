@@ -41,10 +41,10 @@ function scrollFunction() {
 //To display the different links of the menu: Tools, Projects, Expeience, About:
 function toggleFunction() {
 // Hamburguer Menu Icon
-    var z = document.getElementById("nav-icon3");
-    if (z.className === "menu-icon") {
-        z.className += " open";
-    } else {
-        z.className = "menu-icon";
+    var z = document.getElementById("nav-animated-hamburguer-icon");
+    if (z.classList.contains("closed")) {
+        z.className = "navbar-toggler navbar-toggler-icon open";
+    } else if (z.classList.contains("open")) {
+        z.className = "navbar-toggler navbar-toggler-icon closed collapsed";
     }
 }

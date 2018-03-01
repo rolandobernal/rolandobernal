@@ -5112,7 +5112,25 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-animation-duration: 2s;
     animation-duration: 2s; }
 
-/* BASE ------------------------------------------- */
+.test {
+  -moz-transform: skew(25deg, 10deg);
+  -o-transform: skew(25deg, 10deg);
+  -ms-transform: skew(25deg, 10deg);
+  -webkit-transform: skew(25deg, 10deg);
+  transform: skew(25deg, 10deg);
+  moz-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 25%;
+  right: 25%;
+  background-color: rgba(20, 20, 20, 0.5); }
+
+/* Custom BASE ------------------------------------------- */
 * {
   box-sizing: border-box; }
 
@@ -5146,9 +5164,9 @@ a {
   color: #0A1525;
   text-decoration: none; }
   a:hover {
-    color: #A5ACAF !important; }
+    color: #A5ACAF; }
 
-/* HEADER & FOOTER -------------------------------- */
+/* Custom HEADER & FOOTER -------------------------------- */
 header {
   height: 550px;
   background: linear-gradient(#4B92DB, #0A1525), url("../img/bg.jpg") no-repeat;
@@ -5196,7 +5214,8 @@ footer {
     background-color: #eee;
     top: -40px; }
   footer .contact-icons {
-    height: 50px; }
+    height: 50px;
+    padding: 0 30px; }
     footer .contact-icons i.fa {
       color: #6c757d;
       background-color: transparent;
@@ -5206,7 +5225,7 @@ footer {
       height: 35px; }
     footer .contact-icons i.fa-lg {
       line-height: 1.5; }
-    footer .contact-icons #linkedin i.fa:hover, footer .contact-icons #linkedin i.faactive, footer .contact-icons #linkedin i.fa:focus {
+    footer .contact-icons #linkedin i.fa:hover, footer .contact-icons #linkedin i.fa:active, footer .contact-icons #linkedin i.fa:focus {
       color: #FDFDFD;
       text-decoration: none;
       cursor: pointer;
@@ -5214,7 +5233,7 @@ footer {
       height: 35px;
       background-color: #007bb6;
       border: 1px solid transparent; }
-    footer .contact-icons #twitter i.fa:hover, footer .contact-icons #twitter i.faactive, footer .contact-icons #twitter i.fa:focus {
+    footer .contact-icons #twitter i.fa:hover, footer .contact-icons #twitter i.fa:active, footer .contact-icons #twitter i.fa:focus {
       color: #FDFDFD;
       text-decoration: none;
       cursor: pointer;
@@ -5222,7 +5241,7 @@ footer {
       height: 35px;
       background-color: #55acee;
       border: 1px solid transparent; }
-    footer .contact-icons #github i.fa:hover, footer .contact-icons #github i.faactive, footer .contact-icons #github i.fa:focus {
+    footer .contact-icons #github i.fa:hover, footer .contact-icons #github i.fa:active, footer .contact-icons #github i.fa:focus {
       color: #FDFDFD;
       text-decoration: none;
       cursor: pointer;
@@ -5230,7 +5249,7 @@ footer {
       height: 35px;
       background-color: #444;
       border: 1px solid transparent; }
-    footer .contact-icons #email i.fa:hover, footer .contact-icons #email i.faactive, footer .contact-icons #email i.fa:focus {
+    footer .contact-icons #email i.fa:hover, footer .contact-icons #email i.fa:active, footer .contact-icons #email i.fa:focus {
       color: #FDFDFD;
       text-decoration: none;
       cursor: pointer;
@@ -5238,6 +5257,9 @@ footer {
       height: 35px;
       background-color: #dd4b39;
       border: 1px solid transparent; }
+    footer .contact-icons .row {
+      justify-content: center;
+      flex-wrap: nowrap !important; }
   footer #myID {
     bottom: 0;
     width: 100%;
@@ -5258,12 +5280,12 @@ footer {
       color: #0A1525;
       text-decoration: none; }
       footer .footer-text a:hover {
-        color: #A5ACAF !important; }
+        color: #A5ACAF; }
   footer .dropdown-divider {
     border-top: 1px solid #f8f9fa;
     padding: 0; }
 
-/* CONTAINERS ------------------------------------- */
+/* Custom CONTAINERS ------------------------------------- */
 .inner {
   padding: 0.5em 1em; }
 
@@ -5271,18 +5293,18 @@ footer {
   margin: 60px 0 0 0;
   padding: 3em; }
 
-/* COMPONENTS ------------------------------------------*/
+/* Custom COMPONENTS ------------------------------------------*/
 .nav-link-1 {
-  color: #0A1525 !important;
+  color: #0A1525;
   text-decoration: none; }
   .nav-link-1:hover {
-    color: #A5ACAF !important; }
+    color: #A5ACAF; }
 
 .nav-link-2 {
-  color: #A5ACAF !important;
+  color: #A5ACAF;
   text-decoration: none; }
   .nav-link-2:hover {
-    color: #fff !important; }
+    color: #fff; }
 
 .navbar {
   background-color: transparent;
@@ -5291,13 +5313,16 @@ footer {
   width: 100%;
   height: 64px;
   z-index: 400;
-  text-transform: uppercase;
-  /* Icon 3 */ }
+  text-transform: uppercase; }
   .navbar .dropdown-item {
     color: #0A1525 !important; }
     .navbar .dropdown-item:hover {
       color: #4B92DB !important;
       cursor: pointer; }
+  .navbar .navbar-brand {
+    float: left;
+    position: absolute;
+    left: 10px; }
   .navbar #img-featured-navbar-sm {
     width: 64px;
     height: 64px;
@@ -5312,69 +5337,69 @@ footer {
     border-color: transparent !important; }
   .navbar .navbar-toggler-icon {
     background-image: none !important; }
-  .navbar #nav-icon3 {
+  .navbar #nav-animated-hamburguer-icon {
     width: 40px;
     height: 40px;
-    position: relative;
-    margin-top: -13px;
-    margin-right: -13px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    float: right; }
-    .navbar #nav-icon3:hover {
-      color: #A5ACAF; }
-  .navbar #nav-icon3 span {
-    display: block;
     position: absolute;
-    height: 4px;
-    width: 100%;
-    background: #fff;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out; }
-  .navbar #nav-icon3 span:nth-child(1) {
-    top: 0px; }
-  .navbar #nav-icon3 span:nth-child(2), .navbar #nav-icon3 span:nth-child(3) {
-    top: 13px; }
-  .navbar #nav-icon3 span:nth-child(4) {
-    top: 26px; }
-  .navbar #nav-icon3.open span:nth-child(1) {
-    top: 13px;
-    width: 0%;
-    left: 50%; }
-  .navbar #nav-icon3.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  .navbar #nav-icon3.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  .navbar #nav-icon3.open span:nth-child(4) {
-    top: 13px;
-    width: 0%;
-    left: 50%; }
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    float: right;
+    right: 25px;
+    top: 16px; }
+    .navbar #nav-animated-hamburguer-icon span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: #fff;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -ms-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out; }
+      .navbar #nav-animated-hamburguer-icon span:nth-child(1) {
+        top: 0px; }
+      .navbar #nav-animated-hamburguer-icon span:nth-child(2), .navbar #nav-animated-hamburguer-icon span:nth-child(3) {
+        top: 13px; }
+      .navbar #nav-animated-hamburguer-icon span:nth-child(4) {
+        top: 26px; }
+    .navbar #nav-animated-hamburguer-icon.open span:nth-child(2) {
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .navbar #nav-animated-hamburguer-icon.open span:nth-child(3) {
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .navbar #nav-animated-hamburguer-icon.open span:nth-child(1), .navbar #nav-animated-hamburguer-icon.open span:nth-child(4) {
+      top: 13px;
+      width: 0%;
+      left: 50%; }
   .navbar .navbar-centered {
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: -15px !important; }
+    margin-top: -15px; }
 
 #typewriter-div {
   width: 100%;
@@ -5506,14 +5531,20 @@ footer {
       font-size: 3.4em; }
 
   .img-featured {
-    display: none; } }
+    display: none; }
+
+  .contact-icons {
+    padding: 0 20px !important; } }
 @media (min-width: 576px) {
   .card-grid {
     width: 900px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row; } }
+    flex-direction: row; }
+
+  .contact-icons {
+    padding: 0 30px !important; } }
 @media (min-width: 768px) {
   .photo-grid {
     width: 900px;
@@ -5522,6 +5553,22 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center; } }
+@media (max-width: 991px) {
+  .menu-links-mobile {
+    margin-top: 40px !important;
+    background-color: rgba(75, 146, 219, 0.95);
+    border: 1px solid rgba(10, 21, 37, 0.75);
+    border-radius: 0.25rem; }
+    .menu-links-mobile .nav-link-1,
+    .menu-links-mobile .nav-link-2 {
+      color: #0A1525; }
+      .menu-links-mobile .nav-link-1:hover,
+      .menu-links-mobile .nav-link-2:hover {
+        color: #A5ACAF; }
+    .menu-links-mobile .dropdown-menu {
+      font-size: .80rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.95); } }
 @media (min-width: 992px) {
   header {
     background-position: 0 0, 0 45%; } }
