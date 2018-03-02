@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/w3.css">
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
 
@@ -60,8 +62,8 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTools" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Tools
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownApps" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Apps
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Converters</a>
@@ -127,16 +129,17 @@
           <a class="btn-callout" href="#About">Learn more</a>
         </div>
     </div> <!-- ./div class="inner" -->
+<!--
     <div class="card-grid-container">
         <div class="card-grid">
           <div class="card-grid-item">
-            <i class="material-icons icon">build</i>
-            <h1>Tools</h1>
+            <i class="material-icons icon">apps</i>
+            <h1>Apps</h1>
             <p></p>
             <a class="btn-info" href="#">Learn more</a>
           </div>
           <div class="card-grid-item">
-            <i class="material-icons icon">apps</i>
+            <i class="material-icons icon">build</i>
             <h1>Projects</h1>
             <p></p>
             <a class="btn-info" href="#">Learn more</a>
@@ -155,6 +158,71 @@
           </div>
         </div>
     </div>
+-->
+<!-- Tabs -->
+    <div class="tabs-container">
+      <div class="tab">
+        <button class="tablinks" onclick="openSection(event, 'Apps')"><i class="material-icons icon">apps</i>&nbsp;Apps</button>
+        <button class="tablinks" onclick="openSection(event, 'Projects')"><i class="material-icons icon">laptop mac</i>&nbsp;Projects</button>
+        <button class="tablinks" onclick="openSection(event, 'Experience')"><i class="material-icons icon">work</i>&nbsp;Experience</button>
+        <button class="tablinks" onclick="openSection(event, 'About')"><i class="material-icons icon">person</i>&nbsp;About</button>
+      </div>
+
+      <div id="Apps" class="tabcontent">
+        <h3>Apps</h3>
+        <div>
+          <ul>
+            <li><a class="dropdown-item" href="#">Converters</a></li>
+            <li><a class="dropdown-item" href="#">To Do</a></li>
+            <li><a class="dropdown-item" href="#">Budget</a></li>
+            <li><a class="dropdown-item" href="#">Translator</a></li>
+            <li><a class="dropdown-item" href="#">ASCII</a></li>
+          </ul>
+        </div>
+      </div> <!-- End of Apps-->
+
+      <div id="Projects" class="tabcontent">
+        <h3>Projects (Websites)</h3>
+        <div>
+          <ul>
+            <li><a class="dropdown-item" href="#">Converters</a></li>
+            <li><a class="dropdown-item" href="#">To Do</a></li>
+            <li><a class="dropdown-item" href="#">Budget</a></li>
+            <li><a class="dropdown-item" href="#">Translator</a></li>
+            <li><a class="dropdown-item" href="#">ASCII</a></li>
+          </ul>
+        </div>
+      </div> <!-- End of Projects-->
+      
+      <div id="Experience" class="tabcontent">
+        <h3>Experience</h3>
+        <div>
+          <ul>
+            <li><a class="dropdown-item" href="#">Converters</a></li>
+            <li><a class="dropdown-item" href="#">To Do</a></li>
+            <li><a class="dropdown-item" href="#">Budget</a></li>
+            <li><a class="dropdown-item" href="#">Translator</a></li>
+            <li><a class="dropdown-item" href="#">ASCII</a></li>
+          </ul>
+        </div>
+      </div> <!-- End of Experience-->
+
+      <div id="About" class="tabcontent">
+        <h3>A little about me</h3>
+        <div>
+          <ul>
+            <li><a class="dropdown-item" href="#">Converters</a></li>
+            <li><a class="dropdown-item" href="#">To Do</a></li>
+            <li><a class="dropdown-item" href="#">Budget</a></li>
+            <li><a class="dropdown-item" href="#">Translator</a></li>
+            <li><a class="dropdown-item" href="#">ASCII</a></li>
+          </ul>
+        </div>
+      </div> <!-- End of About-->
+
+    </div>
+<!-- End of Tabs-->
+
 <!--
     <div class='photo-grid-container'>
       <div class='photo-grid'>
@@ -222,6 +290,7 @@
     <script type="text/javascript" src="assets/js/nav-bar.js"></script>
     <script type="text/javascript" src="assets/js/typewriter.js"></script>
     <script type="text/javascript" src="assets/js/animations.js"></script>
+    <script type="text/javascript" src="assets/js/tabs.js"></script>
     <!-- To obtain Current Year -->
         <script>
           function getCurrentYear() {
