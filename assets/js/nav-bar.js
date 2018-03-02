@@ -1,6 +1,8 @@
 // When the user scrolls down 64px from the top of the document, change the navbar background
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
+  if (screen.width > 992) {
+    // ----
     if (document.body.scrollTop > 64 || document.documentElement.scrollTop > 64) {
         document.getElementById("myNavbar").style.backgroundColor = "rgba(10, 21, 37, 0.95)";
         var elements = document.querySelectorAll('a.nav-link');
@@ -37,6 +39,9 @@ function scrollFunction() {
         document.getElementById("img-featured-header").style.opacity = "1";
         document.getElementById("img-featured-header").style.transform = "scale(1,1)";
     }
+    // ----
+  }
+    
 }
 //To display the different links of the menu: Tools, Projects, Expeience, About:
 function toggleFunction() {

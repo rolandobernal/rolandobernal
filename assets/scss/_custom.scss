@@ -463,50 +463,26 @@ footer {
   }
 }
 
-/* MEDIA QUERIES ---------------------------------- */
+/* Custom MEDIA QUERIES ---------------------------------- */
 
 // Remember: min = larger than; max = smaller than.
 
-@media (max-width: 575px) {
-  header {
-    height: 340px;
-    h1 {
-      font-size: 3.4em;
+@media (max-width: 992px) { // smaller than 992px
+  .navbar {
+    background-color: rgba(10, 21, 37, 0.95) !important;
+    #img-featured-navbar-sm {
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: scale(1, 1) !important;
+      transition: visibility 0.15s, opacity 0.5s ease-in, transform 0.5s ease !important;
     }
   }
   .img-featured {
-    display: none;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: scale(0.5, 0.5) !important;
+    transition: visibility 0.15s, opacity 0.5s ease-in, transform 0.5s ease !important;
   }
-  .contact-icons {
-    padding: 0 20px !important;
-  }
-}
-
-@media (min-width: 576px) {
-  .card-grid {
-    width: 900px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .contact-icons {
-    padding: 0 30px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .photo-grid {
-    width: 900px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-@media (max-width: 991px) {
   .menu-links-mobile {
     margin-top: 40px !important;
     background-color: rgba(75, 146, 219, 0.95); //whitesmoke !important;
@@ -527,8 +503,91 @@ footer {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) { // larger than 768px
+  .photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) { //smaller than 767px AND larger than 576px
+  #typewriter{
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 576px) { //larger than 576px
+  .card-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .contact-icons {
+    padding: 0 30px !important;
+  }
+}
+
+
+
+@media (max-width: 575px) and (min-width: 476px) { //smaller than 575px AND larger than 476px
   header {
-    background-position: 0 0, 0 45%;
+    h1 {
+      font-size: 3.4em;
+    }
+  }
+  .img-featured {
+    display: none;
+  }
+  #typewriter{
+    font-size: 1em;
+  }
+  .contact-icons {
+    padding: 0 20px !important;
+  }
+}
+
+
+@media (max-width: 475px) { //smaller than 475px
+  header {
+    height: 450px;
+    h1 {
+      font-size: 3em;
+    }
+  }
+  #typewriter{
+    font-size: .95em;
+  }
+  .contact-icons {
+    padding: 0 20px !important;
+  }
+}
+
+@media (max-width: 453px) { //smaller than 453px
+  header {
+    height: 400px;
+    h1 {
+      font-size: 2.75em;
+    }
+  }
+  #typewriter{
+    font-size: .75em;
+  }
+}
+
+@media (max-width: 373px) { //smaller than 373px
+  header {
+    height: 350px;
+    h1 {
+      font-size: 2em;
+    }
+  }
+  #typewriter{
+    font-size: .55em;
   }
 }
