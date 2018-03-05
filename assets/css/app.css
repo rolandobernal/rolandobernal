@@ -5048,6 +5048,42 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
+/* Custom BASE ------------------------------------------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  height: 100%;
+  color: #343434;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin: 0; }
+
+.cover-container {
+  max-width: 42em; }
+
+h1,
+h2 {
+  font-family: "Bree Serif", serif; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+p {
+  margin-bottom: 1.25em; }
+  .intro p {
+    font-size: 1.2em; }
+
+a {
+  color: #0A1525;
+  text-decoration: none; }
+  a:hover {
+    color: #A5ACAF; }
+
 .delay-02s {
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s; }
@@ -5132,18 +5168,25 @@ a.text-dark:hover, a.text-dark:focus {
 
 .tabs-container {
   margin-bottom: 150px; }
+  .tabs-container .material-icons {
+    position: relative;
+    top: 5px;
+    width: 24px;
+    margin-right: 55px; }
 
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #4B92DB;
+  border: none;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row; }
   .tab button {
-    background-color: inherit;
-    border: none;
+    color: #eee;
+    background-color: #0A1525;
+    border: 1px solid #eee;
+    border-radius: 0.25em;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
@@ -5151,20 +5194,23 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 17px;
     flex: 1; }
     .tab button:hover {
-      background-color: #ddd; }
+      background-color: #ddd;
+      color: #4B92DB; }
     .tab button .active {
-      background-color: #ccc; }
-    .tab button .material-icons {
-      position: relative;
-      top: 5px;
-      width: 24px;
-      margin-right: 5px; }
+      background-color: #ccc;
+      color: #4B92DB; }
 
 .tabcontent {
   display: none;
   padding: 6px 12px;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s; }
+  .tabcontent .img-resume {
+    width: 70px;
+    height: 70px; }
+  .tabcontent .span12 {
+    text-align: left;
+    margin-left: 20px; }
 
 @-webkit-keyframes fadeEffect {
   from {
@@ -5176,42 +5222,6 @@ a.text-dark:hover, a.text-dark:focus {
     opacity: 0; }
   to {
     opacity: 1; } }
-/* Custom BASE ------------------------------------------- */
-* {
-  box-sizing: border-box; }
-
-body {
-  height: 100%;
-  color: #343434;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: "Raleway", sans-serif;
-  text-align: center;
-  margin: 0; }
-
-.cover-container {
-  max-width: 42em; }
-
-h1,
-h2 {
-  font-family: "Bree Serif", serif; }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; }
-
-p {
-  margin-bottom: 1.25em; }
-  .intro p {
-    font-size: 1.2em; }
-
-a {
-  color: #0A1525;
-  text-decoration: none; }
-  a:hover {
-    color: #A5ACAF; }
-
 /* Custom HEADER & FOOTER -------------------------------- */
 header {
   height: 550px;
