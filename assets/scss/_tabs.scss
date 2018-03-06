@@ -7,6 +7,22 @@
       width: 24px;
       margin-right: 55px;
   }
+  .section-tittle {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .item-centered {
+    @include custom-center (200px);
+  }
+  .custom-button {
+    @include custom-button ($color-shade, $color-primary, $color-shade, $color-secondary, $color-shade, $color-secondary, $color-shade);
+    a {
+      color: inherit !important;
+    }
+  }
+  .download-icon {
+    margin-right: 5px;
+  }
 }
 
 //* Style the tab */
@@ -18,28 +34,10 @@
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+  height: 300px;
   //* Style the buttons inside the tab */
   button {
-    color: $color-shade;
-    background-color: $color-primary;
-    border: 1px solid $color-shade;
-    border-radius: 0.25em;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    flex: 1;
-    //* Change background color of buttons on hover */
-    &:hover {
-      background-color: #ddd;
-      color: $color-secondary;
-    }
-    //* Create an active/current tablink class */
-    .active {
-      background-color: #ccc;
-      color: $color-secondary;
-    }
+    @include button;
   }
 } // End of .tab
 
@@ -47,16 +45,20 @@
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
+  -webkit-animation: fadeEffect 1.5s;
+  animation: fadeEffect 1.5s;
+  border: 1px solid rgb(238, 238, 238);
+  @include rounded;
+  @include custom-center (900px);
   .img-resume {
     width: 70px;
     height: 70px;
   }
-  .span12 {
-    text-align: left;
-    margin-left: 20px;
+  p, .span12 {
+    text-align: justify;
+    @include center;
   }
+  padding-bottom: 50px;
 }
 
 //* Fade in tabs */
