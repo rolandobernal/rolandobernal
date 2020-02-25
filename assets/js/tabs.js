@@ -1,4 +1,4 @@
-function openSection(evt, sectionNam e) {
+function openSection(evt, sectionName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {

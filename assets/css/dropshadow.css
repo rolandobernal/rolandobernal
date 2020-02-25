@@ -37,6 +37,7 @@
 	float: right;
 	margin-left: 10px
 }
+/* dropshadowboxes-drop-shadow dropshadowboxes-rounded-corners dropshadowboxes-inside-and-outside-shadow dropshadowboxes-lifted-both dropshadowboxes-effect-default */
 .dropshadowboxes-rounded-corners {
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
