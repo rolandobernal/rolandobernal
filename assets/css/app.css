@@ -6930,6 +6930,11 @@ a:hover {
   color: #A5ACAF;
 }
 
+.dropshadowboxes-container a:hover {
+    color: rgba(10, 21, 37, 0.65);
+    text-decoration: none;
+}
+
 .delay-02s {
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
@@ -7262,6 +7267,10 @@ footer .contact-icons i.fa {
 
 footer .contact-icons i.fa-lg {
   line-height: 1.5;
+}
+
+footer .contact-icons-custom i.fa-lg {
+    line-height: 1.8;
 }
 
 footer .contact-icons #linkedin i.fa:hover, footer .contact-icons #linkedin i.fa:active, footer .contact-icons #linkedin i.fa:focus {

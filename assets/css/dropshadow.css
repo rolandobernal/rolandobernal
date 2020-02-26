@@ -1,17 +1,17 @@
-.dropshadowboxes-container {
-	clear: both;
-	display: block;
-	position: relative;
-	z-index: 1;
-  width: 500px;
-  margin: auto;
-}
+/*
+@thelandobeist
+thelandobeist.github.io/assets/css/dropshadow.css
+  */
+
 .dropshadowboxes-container:after {
 	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden
+}
+.dropshadowboxes-container {
+    max-width: 300px;
 }
 .dropshadowboxes-container.dropshadowboxes-center {
 	width: 100%
