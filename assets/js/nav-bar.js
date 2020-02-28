@@ -7,7 +7,7 @@ function scrollFunction() {
         // ----
         let eleMyNavBar = document.getElementById("myNavbar");
         if (document.body.scrollTop > 64 || document.documentElement.scrollTop > 64) {
-            eleMyNavBar.style.backgroundColor = "rgba(10, 21, 37, 0.95)";
+            eleMyNavBar.style.backgroundColor = "rgba(10, 21, 37, 1)";
             eleMyNavBar.classList.add("navbar-shadow");
             document.getElementById("navbarSupportedContent").classList.remove("navbar-centered");
             document.getElementById("navbarSupportedContent").classList.add("navbar-right");
@@ -50,14 +50,23 @@ function scrollFunction() {
         }
         // ----
     }
-}
+};
 //To display the different links of the menu: Apps, Projects, Expeience, About:
 function toggleFunction() {
     // Hamburguer Menu Icon
-    var z = document.getElementById("nav-animated-hamburguer-icon");
+    let z = document.getElementById("nav-animated-hamburguer-icon");
+    let mmsb = document.getElementById("navbarSupportedContent");
+    console.log("mmsb: ", mmsb);
     if (z.classList.contains("closed")) {
         z.className = "navbar-toggler navbar-toggler-icon open";
     } else if (z.classList.contains("open")) {
         z.className = "navbar-toggler navbar-toggler-icon closed collapsed";
     }
-}
+    if (mmsb.classList.contains("animated-closed")) {
+        mmsb.className = "navbar-nav navbar-centered menu-links-mobile animate-open";
+        console.log("mmsb classes: ", mmsb.classList);
+    } else if (mmsb.classList.contains("animate-open")) {
+        mmsb.className = "navbar-nav navbar-centered menu-links-mobile animate-closed";
+        console.log("mmsb classes: ", mmsb.classList);
+    }
+};

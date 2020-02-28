@@ -2,7 +2,7 @@
 
 myID = document.getElementById("myID");
 
-var myScrollFunc = function() {
+var myScrollFunc = function () {
     var y = window.scrollY;
 
     if (y >= 100) {
@@ -18,10 +18,10 @@ window.addEventListener("scroll", myScrollFunc);
 // When the user hovers over the Learn More button, show the shadow animation for said button
 // Vanilla JS solution:
 function myOverFunction() {
-  document.getElementById("learnMore").className += " dropshadowboxes-lifted-both dropshadowboxes-effect-default";
+    document.getElementById("learnMore").className += " dropshadowboxes-lifted-both dropshadowboxes-effect-default";
 }
 function myLeaveFunction() {
-  document.getElementById("learnMore").className = "dropshadowboxes-drop-shadow dropshadowboxes-rounded-corners dropshadowboxes-inside-and-outside-shadow";
+    document.getElementById("learnMore").className = "dropshadowboxes-drop-shadow dropshadowboxes-rounded-corners dropshadowboxes-inside-and-outside-shadow";
 }
 
 
